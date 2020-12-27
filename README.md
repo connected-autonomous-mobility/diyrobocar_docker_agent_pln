@@ -11,7 +11,10 @@ public docker agent for racing diyrobocars on Unity simulator
 docker exec  -it diyrobocars_agent1 bash
 ```
 
-## Code Running on Entry Point
+## Code Running
+in file pln-docker-compose.yml:
 ```
-python /root/rC3car/test_client.py
+...
+entrypoint: python /root/rC3car/test_client.py
+...
 ```
