@@ -178,7 +178,8 @@ def test_clients():
     time.sleep(1)
 
     # Load Scene message. Only one client needs to send the load scene.
-    msg = '{ "msg_type" : "load_scene", "scene_name" : "generated_track" }'
+    #msg = '{ "msg_type" : "load_scene", "scene_name" : "generated_track" }'
+    msg = '{ "msg_type" : "load_scene", "scene_name" : "hockenheim_track" }'
     clients[0].send_now(msg)
 
 

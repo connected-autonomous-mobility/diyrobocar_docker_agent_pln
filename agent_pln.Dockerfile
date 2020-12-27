@@ -67,5 +67,5 @@ COPY ./rC3car  /root/rC3car
 RUN git clone https://github.com/tawnkramer/gym-donkeycar
 RUN pip install -e gym-donkeycar
 
-CMD /bin/bash  -c "python /root/rC3car/test_client.py"
+#CMD /bin/bash  -c "python /root/rC3car/test_client.py"
 #CMD /bin/bash  -c "source /catkin_ws/devel/setup.bash; cd /catkin_ws; catkin_make; roslaunch --wait pln5 pln-gbltp_pd_controller_racer.launch"
