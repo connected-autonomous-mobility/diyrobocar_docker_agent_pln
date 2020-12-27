@@ -47,5 +47,6 @@ services:
     #- /home/rainer/catkin_ws/data:/catkin_ws/data
     #- /media/rainer/_data/30-projects/f1tenth/f1tenth_docker_agent_pln/pln5:/catkin_ws/src/pln5
     image: parkinglotnerds/rc3:version_0.1
-    #entrypoint: ./start_agent5b.sh
-    entrypoint: bash
+    #entrypoint: ./start_test_client.sh
+    #entrypoint: bash
+    entrypoint: python /root/rC3car/test_client.py
