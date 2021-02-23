@@ -19,7 +19,7 @@ RUN python3 -m pip install python-igraph==0.8.2
 
 RUN apt-get install -y python3-igraph # rbx
 
-RUN python3 -m pip install numpy scipy pyyaml rospkg configparser zmq igraph trajectory_planning_helpers scikit-build cmake catkin_pkg rosdep rosinstall_generator rosinstall wstool vcstools catkin_tools
+RUN python3 -m pip install numpy scipy pyyaml rospkg configparser zmq igraph trajectory_planning_helpers scikit-build cmake catkin_pkg rosdep rosinstall_generator rosinstall wstool vcstools catkin_tools pandas
 
 
 RUN rosdep init
@@ -60,9 +60,11 @@ RUN pip3 install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/u
 RUN apt remove -y python3-numpy
 
 # DIYrobocars setup
-RUN git clone https://github.com/autorope/donkeycar
-RUN cd /donkeycar; git checkout master; pip install -e .[pc]
+#RUN git clone https://github.com/autorope/donkeycar
+RUN git clone https://github.com/Heavy02011/donkeycar # fix as long PR is not done
+RUN cd /donkeycar; git checkout dev; pip install -e .[pc]
 COPY ./rC3car  /root/rC3car
+COPY ./race7  /root/race7
 
 RUN git clone https://github.com/tawnkramer/gym-donkeycar
 RUN pip install -e gym-donkeycar

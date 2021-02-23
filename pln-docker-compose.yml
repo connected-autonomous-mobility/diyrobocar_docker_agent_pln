@@ -49,4 +49,6 @@ services:
     image: parkinglotnerds/rc3:version_0.1
     #entrypoint: ./start_test_client.sh
     #entrypoint: bash
-    entrypoint: python /root/rC3car/test_client.py
+    #entrypoint: python /root/rC3car/test_client.py
+    entrypoint: python3 /root/race7/manage.py drive --model=/root/race7/models/warren_pln5.h5
+
