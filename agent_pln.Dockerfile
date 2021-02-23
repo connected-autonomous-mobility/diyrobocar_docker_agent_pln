@@ -19,7 +19,7 @@ RUN python3 -m pip install python-igraph==0.8.2
 
 RUN apt-get install -y python3-igraph # rbx
 
-RUN python3 -m pip install numpy scipy pyyaml rospkg configparser zmq igraph trajectory_planning_helpers scikit-build cmake catkin_pkg rosdep rosinstall_generator rosinstall wstool vcstools catkin_tools pandas
+RUN python3 -m pip install numpy scipy pyyaml rospkg configparser zmq igraph trajectory_planning_helpers scikit-build cmake catkin_pkg rosdep rosinstall_generator rosinstall wstool vcstools catkin_tools pandas tensorflow
 
 
 RUN rosdep init
@@ -71,3 +71,4 @@ RUN pip install -e gym-donkeycar
 
 #CMD /bin/bash  -c "python /root/rC3car/test_client.py"
 #CMD /bin/bash  -c "source /catkin_ws/devel/setup.bash; cd /catkin_ws; catkin_make; roslaunch --wait pln5 pln-gbltp_pd_controller_racer.launch"
+#CMD /bin/bash  -c "python3 /root/race7/monitor_client.py"
