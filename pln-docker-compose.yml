@@ -42,6 +42,8 @@ services:
       dockerfile: agent_pln.Dockerfile
     stdin_open: true
     network_mode: "host"
+    ports:
+      - "8887:8887"
     # please do not delete the following lines, only comment
     #volumes:
     #- /home/rainer/catkin_ws/data:/catkin_ws/data
