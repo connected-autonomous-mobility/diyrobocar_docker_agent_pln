@@ -19,7 +19,7 @@ COPY ./myrace /root/myrace
 8. adjust entrypoint in file pln-docker-compose.yml to call your model mymodel.h5
 ```
 ...
-entrypoint: python3 /root/myrace/manage.py --model=/root/myrace/models/mymodel.h5
+entrypoint: python3 /root/myrace/manage.py drive --model=/root/myrace/models/mymodel.h5
 ...
 ```
 ## Start Docker Container
