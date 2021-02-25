@@ -1,6 +1,8 @@
 # diyrobocar_docker_agent_pln
 public docker agent for racing diyrobocars on Unity simulator
 
+#### This version only works with version 4.x!
+
 
 ## HowTo prepare your own model to race
 
