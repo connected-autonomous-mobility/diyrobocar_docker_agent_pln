@@ -8,12 +8,13 @@ public docker agent for racing diyrobocars on Unity simulator
 2. cd diyrobocars_docker_agent_pln
 3. donkey createcar --path ./myrace
 4. add ./myrace/data/* into .gitignore
-5. drive & train you model into ./myrace/models following docs.diyrobocars.com
-6. add to Dockerfile
+5. adjust mymodel.py, please do not forget to set mode to "local", see example in race7/myconfig.py
+6. drive & train you model into ./myrace/models following docs.diyrobocars.com
+7. add to agent_pln.Dockerfile at the spot marked with arrows
 ```
 COPY ./myrace /root/myrace
 ```
-7. adjust entrypoint in file pln-docker-compose.yml to call your model mymodel.h5
+8. adjust entrypoint in file pln-docker-compose.yml to call your model mymodel.h5
 ```
 ...
 entrypoint: python3 /root/myrace/manage.py --model=/root/myrace/models/mymodel.h5
