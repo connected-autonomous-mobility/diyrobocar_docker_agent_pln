@@ -1,5 +1,0 @@
-["cam/image_array", "user/angle", "user/throttle", "user/mode", "pos/pos_x", "pos/pos_y", "pos/pos_z", "pos/speed", "pos/cte", "gyro/gyro_x", "gyro/gyro_y", "gyro/gyro_z", "accel/accel_x", "accel/accel_y", "accel/accel_z", "vel/vel_x", "vel/vel_y", "vel/vel_z"]
-["image_array", "float", "float", "str", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float"]
-{}
-{"created_at": 1614108390.5969563}
-{"paths": ["catalog_0.catalog"], "current_index": 0, "max_len": 1000, "deleted_indexes": []}

@@ -130,11 +130,11 @@ import os
 # NUM_LAST_LAYERS_TO_TRAIN = 7        #when freezing layers, how many layers from the last should be allowed to train?
 # 
 # #WEB CONTROL
-WEB_CONTROL_PORT = int(os.getenv("WEB_CONTROL_PORT", 8887))  # which port to listen on when making a web controller
-WEB_INIT_MODE = "local"              # which control mode to start in. one of user|local_angle|local. Setting local will start in ai mode.
+#WEB_CONTROL_PORT = int(os.getenv("WEB_CONTROL_PORT", 8887))  # which port to listen on when making a web controller
+#WEB_INIT_MODE = "local"              # which control mode to start in. one of user|local_angle|local. Setting local will start in ai mode.
 # 
 # #JOYSTICK
-USE_JOYSTICK_AS_DEFAULT = False #True      #when starting the manage.py, when True, will not require a --js option to use the joystick
+USE_JOYSTICK_AS_DEFAULT = True      #when starting the manage.py, when True, will not require a --js option to use the joystick
 JOYSTICK_MAX_THROTTLE = 1.0         #this scalar is multiplied with the -1 to 1 throttle value to limit the maximum throttle. This can help if you drop the controller or just don't need the full speed available.
 JOYSTICK_STEERING_SCALE = 1.0       #some people want a steering that is less sensitve. This scalar is multiplied with the steering -1 to 1. It can be negative to reverse dir.
 # AUTO_RECORD_ON_THROTTLE = True      #if true, we will record whenever throttle is not zero. if false, you must manually toggle recording with some other trigger. Usually circle button on joystick.
@@ -182,7 +182,7 @@ JOYSTICK_DEVICE_FILE = "/dev/input/js1" # this is the unix file use to access th
 # 
 # #LOGGING
 # HAVE_CONSOLE_LOGGING = True
-# LOGGING_LEVEL = 'INFO'          # (Python logging level) 'NOTSET' / 'DEBUG' / 'INFO' / 'WARNING' / 'ERROR' / 'FATAL' / 'CRITICAL'
+# LOGGING_LEVEL = 'DEBUG'          # (Python logging level) 'NOTSET' / 'DEBUG' / 'INFO' / 'WARNING' / 'ERROR' / 'FATAL' / 'CRITICAL'
 # LOGGING_FORMAT = '%(message)s'  # (Python logging format - https://docs.python.org/3/library/logging.html#formatter-objects
 # 
 # #TELEMETRY
@@ -260,51 +260,25 @@ AUTO_CREATE_NEW_TUB = True     #create a new tub (tub_YY_MM_DD) directory when r
 # #then extract that and modify DONKEY_SIM_PATH.
 DONKEY_GYM = True
 DONKEY_SIM_PATH = "remote" #"/home/tkramer/projects/sdsandbox/sdsim/build/DonkeySimLinux/donkey_sim.x86_64" when racing on virtual-race-league use "remote", or user "remote" when you want to start the sim manually first.
-DONKEY_GYM_ENV_NAME = "donkey-warren-track-v0"
+#DONKEY_GYM_ENV_NAME = "donkey-warren-track-v0"
+DONKEY_GYM_ENV_NAME = "donkey-generated-track-v0"
 
-GYM_CONF = { "body_style" : "donkey", "body_rgb" : (128, 0, 128), "car_name" : "Parking Lot Nerds", "font_size" : 40, "body_style": "car01", 
+
+GYM_CONF = { "body_style" : "cybertruck", "body_rgb" : (128, 0, 128), "car_name" : "Parking Lot Nerds", "font_size" : 40,  
     "msg_type" : "cam_config",
     "img_enc" : "PNG",
     "offset_x" : "0.0",
     "offset_y" : "3.0", # 4.0
     "offset_z" : "3.0", # 5.0
-    "rot_x" : "50.0"    # 90.0
-}
-
-#GYM_CONF['cam_config'] = {
-#    "img_enc" : "PNG",
-#    "offset_x" : "0.0",
-#    "offset_y" : "3.0", # 4.0
-#    "offset_z" : "3.0", # 5.0
-#    "rot_x" : "50.0"    # 90.0
-#}
-    
-
-#GYM_CONF = { "body_style" : "donkey", "body_rgb" : (128, 0, 128), "car_name" : "Parking Lot Nerds", "font_size" : 40, "body_style": "car01", 
-#    "msg_type" : "cam_config",
-#    "img_enc" : "PNG",
-#    "offset_x" : "0.0",
-#    "offset_y" : "3.0", # 4.0
-#    "offset_z" : "3.0", # 5.0
-#    "rot_x" : "50.0",    # 90.0
-#    "msg_type" : "lidar_config", 
-#    "degPerSweepInc" : "2.0", 
-#    "degAngDown" : "0.0", 
-#    "degAngDelta" : "-1.0", 
-#    "numSweepsLevels" : "1", 
-#    "maxRange" : "20.0", "noise" : "0.4", 
-#    "offset_x" : "0.0", "offset_y" : "0.5", "offset_z" : "0.5", "rot_x" : "0.0" 
-#}
-
-GYM_CONF['lidar_config'] = {
-    "degPerSweepInc" : "2.0", 
-    "degAngDown" : "0.0", 
+    "rot_x" : "50.0",    # 90.0
+    "msg_type" : "lidar_config", 
+    "degPerSweepInc" : "2", # 2.0!!!!!!!!!!!!!!!!!!
+    "degAngDown" : "3.0", 
     "degAngDelta" : "-1.0", 
     "numSweepsLevels" : "1", 
-    "maxRange" : "20.0", "noise" : "0.4", 
-    "offset_x" : "0.0", "offset_y" : "0.5", "offset_z" : "0.5", "rot_x" : "0.0"   
-} 
-
+    "maxRange" : "30.0", "noise" : "0.4", 
+    "offset_x" : "0.0", "offset_y" : "0.5", "offset_z" : "0.5", "rot_x" : "0.0" 
+}
 
 #msg = '{ "msg_type" : "lidar_config", "degPerSweepInc" : "2", "degAngDown" : "0", "degAngDelta" : "-1.0", "numSweepsLevels" : "1", "maxRange" : "50.0", "noise" : "0.4", "offset_x" : "0.0", "offset_y" : "0.5", "offset_z" : "0.5", "rot_x" : "0.0" }'
 
@@ -313,23 +287,6 @@ GYM_CONF['lidar_config'] = {
 GYM_CONF["racer_name"] = "Rainer@ParkingLotNerds"
 GYM_CONF["country"] = "Stuttgart, Germany"
 GYM_CONF["bio"] = "We are The Parking Lot Nerds."
-#GYM_CONF = {
-#    "msg_type" : "cam_config",
-##    "fov" : "150", 
-##    "fish_eye_x" : "1.0",
-##    "fish_eye_y" : "1.0",
-##    "img_w" : "255",
-##    "img_h" : "255",
-##    "img_d" : "1",
-#    "img_enc" : "PNG",
-#    "offset_x" : "0.0",
-#    "offset_y" : "4.0", # 4.0
-#    "offset_z" : "5.0", # 5.0
-#    "rot_x" : "50.0"    # 90.0
-#    }
-
-
-
 
 # 
 SIM_HOST = "127.0.0.1"              # when racing on virtual-race-league use host "trainmydonkey.com"
