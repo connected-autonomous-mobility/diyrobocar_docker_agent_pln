@@ -18,8 +18,10 @@ RUN python3 -m pip install python-igraph==0.8.2
 #RUN python3 -m pip install -r requirements.txt
 
 RUN apt-get install -y python3-igraph # rbx
+#RUN apt-get install python3.6-tk
 
 RUN python3 -m pip install numpy scipy pyyaml rospkg configparser zmq igraph trajectory_planning_helpers scikit-build cmake catkin_pkg rosdep rosinstall_generator rosinstall wstool vcstools catkin_tools pandas tensorflow
+
 
 
 RUN rosdep init

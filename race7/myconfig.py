@@ -131,7 +131,9 @@ import os
 # 
 # #WEB CONTROL
 WEB_CONTROL_PORT = int(os.getenv("WEB_CONTROL_PORT", 8887))  # which port to listen on when making a web controller
-WEB_INIT_MODE = "local"              # which control mode to start in. one of user|local_angle|local. Setting local will start in ai mode.
+#WEB_INIT_MODE = "local"              # which control mode to start in. one of user|local_angle|local. Setting local will start in ai mode.
+WEB_INIT_MODE = "user"              # which control mode to start in. one of user|local_angle|local. Setting local will start in ai mode.
+
 # 
 # #JOYSTICK
 USE_JOYSTICK_AS_DEFAULT = False #True      #when starting the manage.py, when True, will not require a --js option to use the joystick

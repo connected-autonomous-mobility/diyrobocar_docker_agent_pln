@@ -41,6 +41,7 @@ services:
       # agent 1's corresponding Dockerfile
       dockerfile: agent_pln.Dockerfile
     stdin_open: true
+    tty: true        # docker run -t
     network_mode: "host"
     ports:
       - "8887:8887"
@@ -52,5 +53,6 @@ services:
     #entrypoint: ./start_test_client.sh
     #entrypoint: bash
     #entrypoint: python /root/rC3car/test_client.py
+    #entrypoint: /root/race7/pln_wait.sh
     entrypoint: python3 /root/race7/manage.py drive --model=/root/race7/models/warren_pln5.h5 
 
