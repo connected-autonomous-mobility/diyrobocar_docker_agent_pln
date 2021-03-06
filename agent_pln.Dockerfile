@@ -35,8 +35,8 @@ RUN apt remove -y python3-numpy
 # DIYrobocars setup
 RUN git clone https://github.com/autorope/donkeycar
 RUN cd /donkeycar; git checkout dev; pip install -e .[pc]
-COPY ./mycar  /root/mycar
-#COPY ./race8  /root/race8
+#COPY ./mycar  /root/mycar
+COPY ./race8  /root/race8
 #------> COPY ./myrace /root/myrace <------
 
 RUN git clone https://github.com/tawnkramer/gym-donkeycar
