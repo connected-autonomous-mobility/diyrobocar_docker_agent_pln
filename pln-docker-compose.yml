@@ -48,9 +48,12 @@ services:
     #volumes:
     #- /home/rainer/catkin_ws/data:/catkin_ws/data
     #- /media/rainer/_data/30-projects/f1tenth/f1tenth_docker_agent_pln/pln5:/catkin_ws/src/pln5
-    image: parkinglotnerds/race7:version_0.1
+    #image: parkinglotnerds/diyrobocars:race_7
+    image: parkinglotnerds/diyrobocars:plain_1 #race_8dev
+    
     #entrypoint: ./start_test_client.sh
-    #entrypoint: bash
+    entrypoint: bash
     #entrypoint: python /root/rC3car/test_client.py
-    entrypoint: python3 /root/race7/manage.py drive --model=/root/race7/models/warren_pln5.h5 
-
+    #entrypoint: python3 /root/race7/manage.py drive --model=/root/race7/models/warren_pln5.h5 
+    #entrypoint: ./root/race7/pln_startscript.sh #python3 /root/race7/manage.py drive --model=/root/race7/models/warren_pln5.h5; python3 /root/race7/monitor_client.py
+    #entrypoint: ./root/race8/pln_start_client.sh
