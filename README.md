@@ -49,7 +49,7 @@ This will create a docker image <yourusername/racexx:version_0.1> on your machin
 ```
 ## C. Push Docker Image to hub.docker.com
 ```
-./xxx.sh
+docker push yourusername/racexx:version_0.1
 ```
 
 ## D. run the car
