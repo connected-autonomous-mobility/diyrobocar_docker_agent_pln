@@ -30,7 +30,12 @@ entrypoint: python3 /root/myrace/manage.py drive --model=/root/myrace/models/mym
 image: yourusername/racexx:version_0.1
 ...
 ```
-
+12. add your user & docker image name runcar.sh
+```
+...
+image: yourusername/racexx:version_0.1
+...
+```
 
 ## B. Generate & Start Docker Container
 This will create a docker image <yourusername/racexx:version_0.1> on your machine and start it. 
