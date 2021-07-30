@@ -7,7 +7,7 @@ HowTo prepare a public docker agent for racing diyrobocars on Unity simulator to
 ## A. HowTo prepare your own model to race
 
 1. clone this repo & cd diyrobocars_docker_agent_pln
-2. set your teamname (to avoid conflicting images on the Unity server) in  https://github.com/connected-autonomous-mobility/diyrobocar_docker_agent_pln/blob/main/pln-docker-compose.yml
+2. set your teamname (to avoid conflicting container names on the Unity server) in  https://github.com/connected-autonomous-mobility/diyrobocar_docker_agent_pln/blob/main/pln-docker-compose.yml
 ```
 ...
 container_name: diyrobocars_agent0_teamname
