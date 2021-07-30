@@ -42,13 +42,17 @@ docker run -it --rm --network host \
 ...
 ```
 
-## B. Generate & Start Docker Container
+## B. Generate & test Docker Image
 This will create a docker image <yourusername/racexx:version_0.1> on your machine and start it. 
 ```
 ./start_pln.sh
 ```
+## C. Push Docker Image to hub.docker.com
+```
+./xxx.sh
+```
 
-## C. run the car
+## D. run the car
 This will load your docker image <yourusername/racexx:version_0.1> on your machine and start it. 
 ```
 ./runcar.sh
