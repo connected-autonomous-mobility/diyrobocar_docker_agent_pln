@@ -49,7 +49,10 @@ services:
     #volumes:
     #- /home/rainer/catkin_ws/data:/catkin_ws/data
     #- /media/rainer/_data/30-projects/f1tenth/f1tenth_docker_agent_pln/pln5:/catkin_ws/src/pln5
-    image: parkinglotnerds/race7:version_0.1
+    #image: parkinglotnerds/race7:version_0.1
+    #
+    # VVVV
+    image: yourusername/racexx:version_0.1
     #entrypoint: ./start_test_client.sh
     #entrypoint: bash
     #entrypoint: python /root/rC3car/test_client.py
