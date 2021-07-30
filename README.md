@@ -32,7 +32,8 @@ image: yourusername/racexx:version_0.1
 ```
 
 
-## Start Docker Container
+## Generate & Start Docker Container
+This will create a docker image <yourusername/racexx:version_0.1> on your machine and start it. 
 ```
 ./start_pln.sh
 ```
