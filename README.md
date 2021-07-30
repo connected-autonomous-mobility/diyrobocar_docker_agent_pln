@@ -30,10 +30,12 @@ entrypoint: python3 /root/myrace/manage.py drive --model=/root/myrace/models/mym
 image: yourusername/racexx:version_0.1
 ...
 ```
-12. add your user & docker image name runcar.sh
+12. add your user & docker image name in file runcar.sh
 ```
 ...
-image: yourusername/racexx:version_0.1
+docker run -it --rm --network host \
+  yourusername/racexx:version_0.1\
+  bash -c "cd /root/myrace/ && $cmd_line"
 ...
 ```
 
