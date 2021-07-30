@@ -6,8 +6,13 @@ HowTo prepare a public docker agent for racing diyrobocars on Unity simulator to
 
 ## A. HowTo prepare your own model to race
 
-1. clone this repo
-2. cd diyrobocars_docker_agent_pln
+1. clone this repo & cd diyrobocars_docker_agent_pln
+2. set your teamname (to avoid conflicting images on the Unity server) in  https://github.com/connected-autonomous-mobility/diyrobocar_docker_agent_pln/blob/main/pln-docker-compose.yml
+```
+...
+image: yourusername/racexx:version_0.1
+...
+```
 3. donkey createcar --path ./myrace
 4. add ./myrace/data/* into .gitignore
 5. adjust myconfig.py, please do not forget to set mode to "local", see example in race7/myconfig.py
