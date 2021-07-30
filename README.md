@@ -52,7 +52,7 @@ docker push yourusername/racexx:version_0.1
 ```
 
 ## D. run the car
-This will load your docker image <yourusername/racexx:version_0.1> on your machine and start it. 
+This will load your docker image <yourusername/racexx:version_0.1> on your or any machine (with docker installed) and start it. 
 ```
 ./runcar.sh
 ```
