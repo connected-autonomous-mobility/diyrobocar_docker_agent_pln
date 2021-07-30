@@ -26,7 +26,8 @@ entrypoint: python3 /root/myrace/manage.py drive --model=/root/myrace/models/mym
 11. add your user & docker image name in https://github.com/connected-autonomous-mobility/diyrobocar_docker_agent_pln/blob/main/pln-docker-compose.yml
 ```
 ...
-image: python3 /root/myrace/manage.py drive --model=/root/myrace/models/mymodel.h5
+# VVVV
+image: yourusername/racexx:version_0.1
 ...
 ```
 
