@@ -10,7 +10,7 @@ HowTo prepare a public docker agent for racing diyrobocars on Unity simulator to
 2. set your teamname (to avoid conflicting images on the Unity server) in  https://github.com/connected-autonomous-mobility/diyrobocar_docker_agent_pln/blob/main/pln-docker-compose.yml
 ```
 ...
-image: yourusername/racexx:version_0.1
+container_name: diyrobocars_agent0_teamname
 ...
 ```
 3. donkey createcar --path ./myrace
