@@ -11,9 +11,12 @@ public docker agent for racing diyrobocars on Unity simulator
 3. donkey createcar --path ./myrace
 4. add ./myrace/data/* into .gitignore
 5. adjust myconfig.py, please do not forget to set mode to "local", see example in race7/myconfig.py
-6. drive & train 
-7. copy your model into ./myrace/models following docs.diyrobocars.com
-8. add your data in agent_pln.Dockerfile at the spot marked with arrows
+```
+WEB_INIT_MODE = "local"   
+```
+7. drive & train 
+8. copy your model into ./myrace/models following docs.diyrobocars.com
+9. add your data in agent_pln.Dockerfile at the spot marked with arrows
 ```
 COPY ./myrace /root/myrace
 ```
