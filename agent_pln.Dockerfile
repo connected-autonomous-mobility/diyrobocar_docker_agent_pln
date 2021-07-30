@@ -62,6 +62,7 @@ RUN pip3 install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/u
 RUN apt remove -y python3-numpy
 
 # DIYrobocars setup
+RUN pip install pyfiglet prettytable
 RUN git clone https://github.com/autorope/donkeycar
 #RUN git clone https://github.com/Heavy02011/donkeycar # fix as long PR is not done
 RUN cd /donkeycar; git checkout dev; pip install -e .[pc]
