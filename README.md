@@ -14,11 +14,11 @@ public docker agent for racing diyrobocars on Unity simulator
 6. drive & train 
 7. copy your model into ./myrace/models following docs.diyrobocars.com
 8. add your data in agent_pln.Dockerfile at the spot marked with arrows
-9. add your user name 
+9. add your user & docker image name in https://github.com/connected-autonomous-mobility/diyrobocar_docker_agent_pln/blob/main/pln-docker-compose.yml
 ```
 COPY ./myrace /root/myrace
 ```
-8. adjust entrypoint in file pln-docker-compose.yml to call your model mymodel.h5
+10. adjust entrypoint in file pln-docker-compose.yml to call your model mymodel.h5
 ```
 ...
 entrypoint: python3 /root/myrace/manage.py drive --model=/root/myrace/models/mymodel.h5
