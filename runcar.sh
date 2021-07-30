@@ -8,5 +8,5 @@ echo "Executing in the docker (gpu image):"
 echo $cmd_line
 
 docker run -it --rm --network host \
-  parkinglotnerds/diyrobocars:race_9\
+  yourusername/racexx:version_0.1\
   bash -c "cd /root/myrace/ && $cmd_line"
