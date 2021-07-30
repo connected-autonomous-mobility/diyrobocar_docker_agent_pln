@@ -59,6 +59,6 @@ This will load your docker image <yourusername/racexx:version_0.1> on your or an
 
 ## Access Docker Container (in case you want to check something)
 ```
-docker exec  -it diyrobocars_agent0 bash
+docker exec  -it diyrobocars_agent0_teamname bash
 ```
 
