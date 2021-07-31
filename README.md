@@ -67,3 +67,7 @@ This will load your docker image <yourusername/racexx:version_0.1> on your or an
 docker exec  -it diyrobocars_agent0_teamname bash
 ```
 
+## Test docker is running with GPU
+```
+docker run --gpus all nvidia/cuda:10.1-base nvidia-smi
+```
