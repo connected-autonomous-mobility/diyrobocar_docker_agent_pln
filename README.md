@@ -71,3 +71,5 @@ docker exec  -it diyrobocars_agent0_teamname bash
 ```
 docker run --gpus all nvidia/cuda:10.1-base nvidia-smi
 ```
+
+hint: use gpu 1
