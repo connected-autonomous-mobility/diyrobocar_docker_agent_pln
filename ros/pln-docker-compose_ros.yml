@@ -38,16 +38,21 @@ services:
     container_name: pln_ros2-cameracalibration
     build:
       context: .
-      # agent 1's corresponding Dockerfile
-      dockerfile: pln_ros2-galactic.Dockerfile
-      #dockerfile: agent_pln.Dockerfile
+      dockerfile: pln_ros2-galactic_v2.Dockerfile
     stdin_open: true
     tty: true        # docker run -t
     network_mode: "host"
     ports:
       - "8887:8887"
+    environment:
+      - DISPLAY=${DISPLAY}
     # please do not delete the following lines, only comment
-    #volumes:
+    devices:
+      - /dev/video0:/dev/video0
+      - /dev/video1:/dev/video1
+    volumes:
+      - /tmp/.X11-unix/:/tmp/.X11-unix/
+      - /tmp/argus_socket:/tmp/argus_socket
     #- /home/rainer/catkin_ws/data:/catkin_ws/data
     #- /media/rainer/_data/30-projects/f1tenth/f1tenth_docker_agent_pln/pln5:/catkin_ws/src/pln5
     #image: parkinglotnerds/race7:version_0.1
@@ -64,9 +69,7 @@ services:
     container_name: pln_ros1-cv-camera
     build:
       context: .
-      # agent 1's corresponding Dockerfile
-      dockerfile: pln_ros1-noetic.Dockerfile
-      #dockerfile: agent_pln.Dockerfile
+      dockerfile: pln_ros1-noetic_v2.Dockerfile
     stdin_open: true
     tty: true        # docker run -t
     network_mode: "host"
