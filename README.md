@@ -56,13 +56,13 @@ This will create a docker image <yourusername/racexx:version_0.1> on your machin
 docker push yourusername/racexx:version_0.1
 ```
 
-## D. run the car
+## D. run the car - DEPRECATED
 This will load your docker image <yourusername/racexx:version_0.1> on your or any machine (with docker installed) and start it. 
 ```
 ./runcar.sh
 ```
 
-## Access Docker Container (in case you want to check something)
+## Access Docker Container (in case you want to check something) - DEPRECATED
 ```
 docker exec  -it diyrobocars_agent0_teamname bash
 ```
