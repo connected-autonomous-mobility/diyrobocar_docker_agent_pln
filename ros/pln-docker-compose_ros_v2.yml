@@ -38,7 +38,7 @@ services:
     container_name: pln_ros2-cameracalibration
     build:
       context: .
-      dockerfile: pln_ros2-galactic.Dockerfile
+      dockerfile: pln_ros2-galactic_v2.Dockerfile
     stdin_open: true
     tty: true        # docker run -t
     #network_mode: "host"
@@ -69,7 +69,7 @@ services:
     container_name: pln_ros1-cv-camera
     build:
       context: .
-      dockerfile: pln_ros1-noetic.Dockerfile
+      dockerfile: pln_ros1-noetic_v2.Dockerfile
     stdin_open: true
     tty: true        # docker run -t
     #network_mode: "host"
