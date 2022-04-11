@@ -2,7 +2,7 @@
 HowTo prepare a public docker agent for racing diyrobocars on Unity simulator to avoid high latency issues.
 
 *This version only works with version 4.x! Lidar is configured but does not work.*
-
+Please see newest [docker repo of Altex](https://github.com/altexdim/donkeycar-race), as well!
 
 ## A. HowTo prepare your own model to race
 
